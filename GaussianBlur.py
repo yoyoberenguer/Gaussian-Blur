@@ -120,7 +120,7 @@ class GaussianBoxBlur9x9_method1:
     # Horizontal
     def convolution_h(self):
         self.source_array = numpy.zeros((self.shape[0], self.shape[1], 3))
-        print('hello')
+        
         for y in range(0, self.shape[1]):
 
             for x in range(0, self.shape[0]):
