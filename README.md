@@ -9,7 +9,7 @@ Mathematically, applying a Gaussian blur to an image is the same as convolving t
 
 A box blur (also known as a box linear filter) is a spatial domain linear filter in which each pixel in the resulting image has a value equal to the average value of its neighboring pixels in the input image. It is a form of low-pass ("blurring") filter. A 3 by 3 box blur can be written as 1/9 * determinant matrix:
 
-![alt text](https://github.com/yoyoberenguer/Gaussian-Blur/blob/master/Assets/Graphics/boxblur.png)
+![alt text](https://github.com/yoyoberenguer/Gaussian-Blur/blob/master/boxblur.png)
 
 
 
