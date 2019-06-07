@@ -13,7 +13,7 @@ A box blur (also known as a box linear filter) is a spatial domain linear filter
 
 
 
-**Example with 5x5 convolution kernel and blurbox9x9 method **
+**Example with 5x5 convolution kernel and blurbox9x9 method**
 
 ![alt text](https://github.com/yoyoberenguer/Gaussian-Blur/blob/master/Assets/Graphics/Gaussian.png)
 
