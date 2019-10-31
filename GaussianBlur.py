@@ -204,7 +204,7 @@ class GaussianBlur5x5:
                         b += color[2] * k
 
                     except IndexError:
-                        k = self.kernel_v[kernel_offset + self.kernel_half]
+                        k = self.kernel_h[kernel_offset + self.kernel_half]
                         r += 128 * k
                         g += 128 * k
                         b += 128 * k
