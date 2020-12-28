@@ -17,7 +17,7 @@ A box blur (also known as a box linear filter) is a spatial domain linear filter
 
 ![alt text](https://github.com/yoyoberenguer/Gaussian-Blur/blob/master/Assets/Graphics/Gaussian.png)
 
-```      
+```python
 If you are interested in very fast blur algorithm kernel 5x5, please check the file
 bloom.pyx from the project <<light effect improved>> 
 https://github.com/yoyoberenguer/Light-effect-improved/blob/master/bloom.pyx
