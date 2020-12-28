@@ -17,7 +17,7 @@ A box blur (also known as a box linear filter) is a spatial domain linear filter
 
 ![alt text](https://github.com/yoyoberenguer/Gaussian-Blur/blob/master/Assets/Graphics/Gaussian.png)
 
-```python
+
 If you are interested in very fast blur algorithm kernel 5x5, please check the file
 bloom.pyx from the project <<light effect improved>> 
 https://github.com/yoyoberenguer/Light-effect-improved/blob/master/bloom.pyx
@@ -27,17 +27,19 @@ I developped two types of 5x5 blur techniques (using multiprocessing and cython 
 The first technique is using a C-buffer type data as input image.
 Methods below are repectively used for 24 and 32 bit image format.
 Both methods returns a pygame.Surface (blurred image)
-
-bloom.pyx line 174 : 
+```python
+# bloom.pyx line 174 : 
 cpdef blur5x5_buffer24(rgb_buffer, width, height, depth, mask=None):
     return blur5x5_buffer24_c(rgb_buffer, width, height, depth, mask=None)
     
-bloom.pyx line 177 :
+# bloom.pyx line 177 :
 cpdef blur5x5_buffer32(rgba_buffer, width, height, depth, mask=None):
     return blur5x5_buffer32_c(rgba_buffer, width, height, depth, mask=None)
+```
 
 Second method takes a numpy 3d array as input image and return a pygame Surface 
 
+```python
 bloon.pyx line 180 :
 cpdef blur5x5_array24(rgb_array_, mask=None):
     return blur5x5_array24_c(rgb_array_, mask=None)
@@ -45,10 +47,11 @@ cpdef blur5x5_array24(rgb_array_, mask=None):
 bloom.pyx line 183 :
 cpdef blur5x5_array32(rgb_array_, mask=None):
     return blur5x5_array32_c(rgb_array_, mask=None)
-    
+```
     
 e.g : blur5x5_array24_c
 
+```python 
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
