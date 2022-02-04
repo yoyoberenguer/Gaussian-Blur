@@ -57,20 +57,20 @@ e.g : blur5x5_array24_c
 @cython.nonecheck(False)
 @cython.cdivision(True)
 cdef unsigned char [:, :, ::1] blur5x5_array24_c(unsigned char [:, :, :] rgb_array_, mask=None):
-    """
-    # Gaussian kernel 5x5
-        # |1   4   6   4  1|
-        # |4  16  24  16  4|
-        # |6  24  36  24  6|  x 1/256
-        # |4  16  24  16  4|
-        # |1  4    6   4  1|
-    This method is using convolution property and process the image in two passes,
-    first the horizontal convolution and last the vertical convolution
-    pixels convoluted outside image edges will be set to adjacent edge value
     
-    :param rgb_array_: numpy.ndarray type (w, h, 3) uint8 
-    :return: Return 24-bit a numpy.ndarray type (w, h, 3) uint8
-    """
+    # # Gaussian kernel 5x5
+    #    # |1   4   6   4  1|
+    #    # |4  16  24  16  4|
+    #    # |6  24  36  24  6|  x 1/256
+    #    # |4  16  24  16  4|
+    #    # |1  4    6   4  1|
+    # This method is using convolution property and process the image in two passes,
+    # first the horizontal convolution and last the vertical convolution
+    # pixels convoluted outside image edges will be set to adjacent edge value
+    
+    # :param rgb_array_: numpy.ndarray type (w, h, 3) uint8 
+    # :return: Return 24-bit a numpy.ndarray type (w, h, 3) uint8
+    
 
 
     cdef int w, h, dim
